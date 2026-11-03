@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Supabase progress sync
+
+1. Create a Supabase project and copy its project URL and **public anon/publishable key** into `.env.local` using the names in `env.local.example`. Never use a service-role key in the browser.
+2. In the project's SQL Editor, run each statement in `supabase-setup.sql` separately, in order. The editor accepts one statement at a time.
+3. Start the app, create an account at `/register`, and sign in. Quiz accuracy and daily study-plan task checkmarks sync to that account and are restored on the next visit.
+
+If sync fails, the dashboard shows the Supabase error beside your account. Verify the project URL/key, confirm email if required by the project, and rerun the SQL setup if the table or column is missing.
+
 ## Getting Started
 
 First, run the development server:

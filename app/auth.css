@@ -1,0 +1,380 @@
+.auth-page {
+  min-height: 100vh;
+  padding: 0 6vw;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgb(235 241 232 / 58%), transparent 55%),
+    #f7f8f6;
+}
+
+.header {
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.auth-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #23332d;
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+
+.brandMark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 12px;
+  background: #245c4b;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.brandDot {
+  color: #73a080;
+}
+
+.auth-back-link {
+  color: #63716a;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 150ms ease;
+}
+
+.auth-back-link:hover,
+.switchMode a:hover {
+  color: #245c4b;
+}
+
+.auth-main {
+  display: grid;
+  width: min(100%, 990px);
+  min-height: 590px;
+  grid-template-columns: 0.9fr 1.1fr;
+  overflow: hidden;
+  margin: 22px auto 0;
+  border: 1px solid #e8ece7;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 22px 70px rgb(34 55 43 / 8%);
+}
+
+.auth-story {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  padding: 54px 48px;
+  background: #245c4b;
+  color: #fff;
+}
+
+.auth-story-glow {
+  position: absolute;
+  top: 16%;
+  right: -130px;
+  width: 370px;
+  height: 370px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 36px rgb(255 255 255 / 3%), 0 0 0 76px rgb(255 255 255 / 3%);
+}
+
+.storyLabel,
+.auth-eyebrow {
+  color: #c5d5c9;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.auth-story h1 {
+  z-index: 1;
+  margin: 20px 0 13px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 4vw, 49px);
+  font-weight: 400;
+  letter-spacing: -1.6px;
+  line-height: 1.08;
+}
+
+.auth-story h1 em {
+  color: #d6d5a1;
+  font-weight: 400;
+}
+
+.auth-story > p {
+  z-index: 1;
+  max-width: 300px;
+  margin: 0;
+  color: #d1ded5;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.bookArt {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 162px;
+  height: 91px;
+  align-self: center;
+  margin: 55px 0 20px;
+  filter: drop-shadow(0 13px 15px rgb(10 32 23 / 18%));
+  transform: rotate(-7deg);
+}
+
+.bookPageLeft,
+.bookPageRight {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 12px;
+  background: #f6f2e7;
+}
+
+.bookPageLeft {
+  border-radius: 9px 2px 3px 8px;
+  transform: skewY(5deg);
+}
+
+.bookPageRight {
+  border-radius: 2px 9px 8px 3px;
+  transform: skewY(-5deg);
+}
+
+.bookPageLeft i,
+.bookPageRight i {
+  height: 2px;
+  border-radius: 2px;
+  background: #d7ddcb;
+}
+
+.bookPageLeft i:nth-child(2),
+.bookPageRight i:nth-child(3) {
+  width: 72%;
+}
+
+.bookSpine {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: calc(50% - 1px);
+  width: 2px;
+  background: #d0c8b4;
+}
+
+.storyCaption {
+  z-index: 1;
+  color: #c5d5c9;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-align: center;
+}
+
+.formPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px clamp(32px, 6vw, 76px);
+}
+
+.formHeading .auth-eyebrow {
+  color: #688473;
+}
+
+.formHeading h2 {
+  margin: 12px 0 7px;
+  color: #26342d;
+  font-size: 28px;
+  font-weight: 650;
+  letter-spacing: -1px;
+}
+
+.formHeading > p {
+  margin: 0;
+  color: #7d8982;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  color: #45534b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #e4e9e4;
+  border-radius: 8px;
+  outline: none;
+  background: #fcfdfc;
+  color: #26342d;
+  font-size: 12px;
+  font-weight: 400;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.field input::placeholder {
+  color: #a4ada7;
+}
+
+.field input:focus {
+  border-color: #82a68c;
+  box-shadow: 0 0 0 3px rgb(87 139 103 / 11%);
+}
+
+.submit {
+  display: flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 8px;
+  background: #245c4b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 650;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.submit:hover {
+  transform: translateY(-1px);
+  background: #1d4b3e;
+}
+
+.submit:focus-visible,
+.auth-back-link:focus-visible,
+.auth-brand:focus-visible,
+.switchMode a:focus-visible {
+  outline: 3px solid #9dbda4;
+  outline-offset: 3px;
+}
+
+.notice {
+  min-height: 18px;
+  margin: -7px 0 0;
+  color: #9b5539;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.switchMode {
+  margin: 20px 0 0;
+  color: #7d8982;
+  font-size: 11px;
+  text-align: center;
+}
+
+.switchMode a {
+  color: #245c4b;
+  font-weight: 650;
+}
+
+.authNote {
+  margin: 22px 0 0;
+  color: #a0a9a3;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.footer {
+  padding: 22px 0 28px;
+  color: #9aa29e;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .auth-page {
+    padding: 0 20px;
+  }
+
+  .header {
+    min-height: 70px;
+  }
+
+  .auth-main {
+    max-width: 500px;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+  }
+
+  .auth-story {
+    min-height: 220px;
+    padding: 28px 30px;
+  }
+
+  .auth-story h1 {
+    margin: 12px 0 7px;
+    font-size: 35px;
+  }
+
+  .auth-story > p {
+    max-width: 360px;
+    font-size: 11px;
+  }
+
+  .bookArt,
+  .storyCaption {
+    display: none;
+  }
+
+  .formPanel {
+    padding: 36px 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .page {
+    padding: 0 13px;
+  }
+
+  .auth-brand {
+    font-size: 18px;
+  }
+
+  .auth-back-link {
+    font-size: 10px;
+  }
+
+  .auth-story {
+    min-height: 195px;
+    padding: 25px 24px;
+  }
+
+  .auth-story h1 {
+    font-size: 31px;
+  }
+
+  .formPanel {
+    padding: 32px 22px;
+  }
+}
